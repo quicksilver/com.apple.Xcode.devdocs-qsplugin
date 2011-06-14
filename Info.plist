@@ -17,7 +17,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0.1</string>
 	<key>CFBundleVersion</key>
-	<string>B9</string>
+	<string>BA</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2004, Blacktree, Inc.</string>
 	<key>QSPlugIn</key>
@@ -443,6 +443,11 @@
 	</array>
 	<key>QSRegistration</key>
 	<dict>
+		<key>QSBundleChildHandlers</key>
+		<dict>
+			<key>com.apple.Xcode</key>
+			<string>QSDeveloperPlugIn_Source</string>
+		</dict>
 		<key>QSObjectSources</key>
 		<dict>
 			<key>QSDeveloperPlugIn_Source</key>

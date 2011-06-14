@@ -1,0 +1,293 @@
+// !$*UTF8*$!
+{
+	0259C573FE90428111CA0C5A /* Project object */ = {
+		activeBuildConfigurationName = Release;
+		activeTarget = 8D1AC9600486D14A00FE50C9 /* Developer Module */;
+		breakpoints = (
+			CDF2FDFB13A74A02000A9C0A /* QSDeveloperPlugIn_Source.m:29 */,
+			CDF2FE2E13A74C14000A9C0A /* QSDeveloperPlugIn_Source.m:51 */,
+		);
+		codeSenseManager = CDF2FD1A13A745AE000A9C0A /* Code sense */;
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXBookmarksDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBookmarksDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					200,
+					200,
+					271.58349609375,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBookmarksDataSource_LocationID,
+					PBXBookmarksDataSource_NameID,
+					PBXBookmarksDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXExecutablesDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXExecutablesDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					22,
+					300,
+					229,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXExecutablesDataSource_ActiveFlagID,
+					PBXExecutablesDataSource_NameID,
+					PBXExecutablesDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					462,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					422,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 329731777;
+			PBXWorkspaceStateSaveDate = 329731777;
+		};
+		perUserProjectItems = {
+			CDF2FDEE13A74943000A9C0A = CDF2FDEE13A74943000A9C0A /* PBXTextBookmark */;
+			CDF2FE0013A74A07000A9C0A = CDF2FE0013A74A07000A9C0A /* PBXTextBookmark */;
+			CDF2FE3613A74C5B000A9C0A = CDF2FE3613A74C5B000A9C0A /* PBXTextBookmark */;
+			CDF2FE4D13A74C8F000A9C0A = CDF2FE4D13A74C8F000A9C0A /* PBXTextBookmark */;
+			CDF2FE5A13A74CF1000A9C0A = CDF2FE5A13A74CF1000A9C0A /* PBXTextBookmark */;
+			CDF2FE7013A74E3B000A9C0A = CDF2FE7013A74E3B000A9C0A /* PBXTextBookmark */;
+			CDF2FE7113A74E3B000A9C0A = CDF2FE7113A74E3B000A9C0A /* PBXBookmark */;
+			CDF2FE7213A74E3B000A9C0A = CDF2FE7213A74E3B000A9C0A /* PlistBookmark */;
+			CDF2FE8F13A74E82000A9C0A = CDF2FE8F13A74E82000A9C0A /* PlistBookmark */;
+			CDF2FE9F13A74EA0000A9C0A = CDF2FE9F13A74EA0000A9C0A /* PlistBookmark */;
+			CDF2FEAD13A74ECD000A9C0A /* PlistBookmark */ = CDF2FEAD13A74ECD000A9C0A /* PlistBookmark */;
+		};
+		sourceControlManager = CDF2FD1913A745AE000A9C0A /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	14A883B410CFBE0D007D08C4 /* Common.xcconfig */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {719, 546}}";
+			sepNavSelRange = "{165, 0}";
+			sepNavVisRange = "{0, 417}";
+		};
+	};
+	7F28172A0BFC17FC00EFCE79 /* Developer Element */ = {
+		activeExec = 0;
+	};
+	7F28172C0BFC17FC00EFCE79 /* Developer Element-Info.plist */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{67, 27}, {1213, 746}}";
+		};
+	};
+	7F46C3410A2486C0005F64F6 /* QSDeveloperPlugIn_Source.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1545, 3588}}";
+			sepNavSelRange = "{6749, 0}";
+			sepNavVisRange = "{6439, 865}";
+			sepNavWindowFrame = "{{67, 27}, {1213, 746}}";
+		};
+	};
+	8D1AC9600486D14A00FE50C9 /* Developer Module */ = {
+		activeExec = 0;
+	};
+	8D1AC9730486D14A00FE50C9 /* Info.plist */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{67, 27}, {1213, 746}}";
+		};
+	};
+	CDF2FD1913A745AE000A9C0A /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	CDF2FD1A13A745AE000A9C0A /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	CDF2FDEE13A74943000A9C0A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 14A883B410CFBE0D007D08C4 /* Common.xcconfig */;
+		name = "Common.xcconfig: 10";
+		rLen = 0;
+		rLoc = 165;
+		rType = 0;
+		vrLen = 417;
+		vrLoc = 0;
+	};
+	CDF2FDFB13A74A02000A9C0A /* QSDeveloperPlugIn_Source.m:29 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 7F46C3410A2486C0005F64F6 /* QSDeveloperPlugIn_Source.m */;
+		functionName = "-loadChildrenForObject:";
+		hitCount = 2;
+		ignoreCount = 0;
+		lineNumber = 29;
+		location = "Developer Module";
+		modificationTime = 329731262.959923;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	CDF2FE0013A74A07000A9C0A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7F46C3410A2486C0005F64F6 /* QSDeveloperPlugIn_Source.m */;
+		name = "QSDeveloperPlugIn_Source.m: 23";
+		rLen = 0;
+		rLoc = 488;
+		rType = 0;
+		vrLen = 719;
+		vrLoc = 323;
+	};
+	CDF2FE2E13A74C14000A9C0A /* QSDeveloperPlugIn_Source.m:51 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 7F46C3410A2486C0005F64F6 /* QSDeveloperPlugIn_Source.m */;
+		functionName = "-loadChildrenForObject:";
+		hitCount = 2;
+		ignoreCount = 0;
+		lineNumber = 51;
+		location = "Developer Module";
+		modificationTime = 329731264.377072;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	CDF2FE3613A74C5B000A9C0A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7F46C3410A2486C0005F64F6 /* QSDeveloperPlugIn_Source.m */;
+		name = "QSDeveloperPlugIn_Source.m: 59";
+		rLen = 0;
+		rLoc = 1728;
+		rType = 0;
+		vrLen = 860;
+		vrLoc = 1068;
+	};
+	CDF2FE4D13A74C8F000A9C0A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7F46C3410A2486C0005F64F6 /* QSDeveloperPlugIn_Source.m */;
+		name = "QSDeveloperPlugIn_Source.m: 59";
+		rLen = 0;
+		rLoc = 1728;
+		rType = 0;
+		vrLen = 847;
+		vrLoc = 1081;
+	};
+	CDF2FE5A13A74CF1000A9C0A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7F46C3410A2486C0005F64F6 /* QSDeveloperPlugIn_Source.m */;
+		name = "QSDeveloperPlugIn_Source.m: 59";
+		rLen = 0;
+		rLoc = 1728;
+		rType = 0;
+		vrLen = 846;
+		vrLoc = 1081;
+	};
+	CDF2FE7013A74E3B000A9C0A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7F46C3410A2486C0005F64F6 /* QSDeveloperPlugIn_Source.m */;
+		name = "QSDeveloperPlugIn_Source.m: 188";
+		rLen = 0;
+		rLoc = 6749;
+		rType = 0;
+		vrLen = 865;
+		vrLoc = 6439;
+	};
+	CDF2FE7113A74E3B000A9C0A /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 7F28172C0BFC17FC00EFCE79 /* Developer Element-Info.plist */;
+	};
+	CDF2FE7213A74E3B000A9C0A /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 7F28172C0BFC17FC00EFCE79 /* Developer Element-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Developer/Apps/Quicksilver Plugins/XCode Module/Developer Element-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	CDF2FE8F13A74E82000A9C0A /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 7F28172C0BFC17FC00EFCE79 /* Developer Element-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Developer/Apps/Quicksilver Plugins/XCode Module/Developer Element-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	CDF2FE9F13A74EA0000A9C0A /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 7F28172C0BFC17FC00EFCE79 /* Developer Element-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Developer/Apps/QuicksilverPlugins/XCode Module/Developer Element-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	CDF2FEAD13A74ECD000A9C0A /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 7F28172C0BFC17FC00EFCE79 /* Developer Element-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Developer/Apps/QuicksilverPlugins/XcodePlugin/Developer Element-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+}

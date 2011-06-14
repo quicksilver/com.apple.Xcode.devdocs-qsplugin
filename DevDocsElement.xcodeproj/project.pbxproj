@@ -27,7 +27,7 @@
 		14A883BA10CFBE0D007D08C4 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
 		14A883BB10CFBE0D007D08C4 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		32DBCF980370C29C00C91783 /* QSDeveloperPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSDeveloperPlugIn_Prefix.pch; sourceTree = "<group>"; };
-		7F28172B0BFC17FC00EFCE79 /* Developer Documentation.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Developer Documentation.qsplugin"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F28172B0BFC17FC00EFCE79 /* Developer Documentation.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Developer Documentation.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F28172C0BFC17FC00EFCE79 /* Developer Element-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Developer Element-Info.plist"; sourceTree = "<group>"; };
 		7F28178B0BFC193C00EFCE79 /* element.xml */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = element.xml; sourceTree = "<group>"; };
 		7F33C53A0C5D2E4C007B636D /* DocSetAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DocSetAccess.framework; path = Library/PrivateFrameworks/DocSetAccess.framework; sourceTree = DEVELOPER_DIR; };
@@ -92,7 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				8D1AC9740486D14A00FE50C9 /* Developer Module.qsplugin */,
-				7F28172B0BFC17FC00EFCE79 /* Developer Documentation.qsplugin */,
+				7F28172B0BFC17FC00EFCE79 /* Developer Documentation.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,7 +167,7 @@
 			);
 			name = "Developer Element";
 			productName = "Developer Element";
-			productReference = 7F28172B0BFC17FC00EFCE79 /* Developer Documentation.qsplugin */;
+			productReference = 7F28172B0BFC17FC00EFCE79 /* Developer Documentation.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		8D1AC9600486D14A00FE50C9 /* Developer Module */ = {
@@ -177,7 +177,7 @@
 				8D1AC9660486D14A00FE50C9 /* Resources */,
 				8D1AC96A0486D14A00FE50C9 /* Sources */,
 				8D1AC96E0486D14A00FE50C9 /* Frameworks */,
-				E1022B2806B3475D00299BEC /* ShellScript */,
+				CDF2FE6F13A74E29000A9C0A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -196,7 +196,14 @@
 			isa = PBXProject;
 			buildConfigurationList = 7F07AFCE085E432F00E2AFC4 /* Build configuration list for PBXProject "DevDocsElement" */;
 			compatibilityVersion = "Xcode 3.0";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 0259C574FE90428111CA0C5A /* QSDeveloperPlugIn */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -226,16 +233,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		E1022B2806B3475D00299BEC /* ShellScript */ = {
+		CDF2FE6F13A74E29000A9C0A /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
+			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
 		};
