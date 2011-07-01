@@ -2,8 +2,8 @@
 //  QSDeveloperPlugIn_Source.m
 //  QSDeveloperPlugIn
 //
-//  Created by Nicholas Jitkoff on 4/14/05.
-//  Copyright __MyCompanyName__ 2005. All rights reserved.
+//  Created by Nicholas Jitkoff on 14/04/05
+//	Modified by Patrick Robertson on 14/06/11
 //
 
 #import "QSDeveloperPlugIn_Source.h"
@@ -24,6 +24,40 @@
   return [QSResourceManager imageNamed:@"ADCReferenceLibraryIcon"];
 }
 
+// Right arrowing into XCode.app
+- (BOOL)loadChildrenForObject:(QSObject *)object {
+	NSMutableArray *documentsArray = [[NSMutableArray alloc] init];
+	NSURL *url;
+	NSError *err;
+	
+	NSArray *recentDocuments = [(NSArray *)CFPreferencesCopyValue((CFStringRef) @"NSRecentXCProjectDocuments", 
+														 (CFStringRef) @"com.apple.Xcode", 
+														 kCFPreferencesCurrentUser, 
+														 kCFPreferencesAnyHost) autorelease];
+	
+	for(NSData *bookmarkData in recentDocuments) {
+		err = nil;
+		url = [NSURL URLByResolvingBookmarkData:bookmarkData 
+										options:NSURLBookmarkResolutionWithoutMounting|NSURLBookmarkResolutionWithoutUI 
+								  relativeToURL:nil 
+							bookmarkDataIsStale:NO 
+										  error:&err];
+		if (url == nil || err != nil) {
+			// couldn't resolve bookmark, so skip
+			continue;
+		}
+		[documentsArray addObject:[url path]];
+	}
+	if (!documentsArray) {
+	return NO;
+	}
+	NSArray *newChildren = [QSObject fileObjectsWithPathArray:documentsArray];
+	for(QSObject * child in newChildren) {
+		[child setObject:@"com.apple.Xcode" forMeta:@"QSPreferredApplication"];
+	}
+	[object setChildren:newChildren];
+	return YES;
+}
 - (NSString *)identifierForObject:(id <QSObject>)object {
   return nil;
 }
@@ -70,7 +104,6 @@
   
   
   if (YES) {
-    QSLogDebug(@"starting qs developer index.");
     NSFileManager *fileManager = [NSFileManager defaultManager];
     
     NSString *baseDir = @"/Developer/Documentation/DocSets/com.apple.ADC_Reference_Library.CoreReference.docset/Contents/Resources/Documents/documentation/";
@@ -97,7 +130,6 @@
       }
     }
     
-    QSLogDebug(@"done with index.");
     
     return objects;
   }
@@ -153,7 +185,7 @@
   
 	NSURL *url = [NSURL fileURLWithPath:[REFROOT stringByAppendingPathComponent:@"docSet.xml"]];
 	NSXMLDocument *xml = [[NSXMLDocument alloc] initWithContentsOfURL:url
-                                                         options:nil
+                                                         options:NSUncachedRead
                                                            error:nil];
 	
 	
