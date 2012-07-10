@@ -6,9 +6,6 @@
 //  Copyright __MyCompanyName__ 2005. All rights reserved.
 //
 
-
-#import "QSDeveloperPlugIn_Source.h"
-
 @interface QSDeveloperPlugIn_Source : NSObject
 {
 }

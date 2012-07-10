@@ -74,7 +74,7 @@
   
   NSFileManager *fm = [NSFileManager defaultManager];
   NSArray *nodes = [docSet valueForKeyPath: @"rootNode.searchableNodesInHierarchy"];
-  nodes = [nodes filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"domain == %d", 1]];
+  nodes = [nodes filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"domain == %ld", (long)1]];
 
   for (id node in nodes) {
     //NSLog(@"set %@ %@ %@", [node valueForKey:@"name"] , [node valueForKey:@"path"] , [node valueForKey:@"URL"]);
@@ -150,7 +150,7 @@
     while ((dir = [e nextObject]) ) {
       
       
-      NSEnumerator *de = [[fileManager directoryContentsAtPath:dir] objectEnumerator];
+      NSEnumerator *de = [[fileManager contentsOfDirectoryAtPath:dir error:nil] objectEnumerator];
       NSString *junk;
       
       while ((junk = [de nextObject]) ) {
