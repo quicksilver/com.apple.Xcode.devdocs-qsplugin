@@ -24,43 +24,10 @@
   return [QSResourceManager imageNamed:@"ADCReferenceLibraryIcon"];
 }
 
-// Right arrowing into XCode.app
-- (BOOL)loadChildrenForObject:(QSObject *)object {
-	NSMutableArray *documentsArray = [[NSMutableArray alloc] init];
-	NSURL *url;
-	NSError *err;
-	
-	NSArray *recentDocuments = [(NSArray *)CFPreferencesCopyValue((CFStringRef) @"NSRecentXCProjectDocuments", 
-														 (CFStringRef) @"com.apple.Xcode", 
-														 kCFPreferencesCurrentUser, 
-														 kCFPreferencesAnyHost) autorelease];
-	
-	for(NSData *bookmarkData in recentDocuments) {
-		err = nil;
-		url = [NSURL URLByResolvingBookmarkData:bookmarkData 
-										options:NSURLBookmarkResolutionWithoutMounting|NSURLBookmarkResolutionWithoutUI 
-								  relativeToURL:nil 
-							bookmarkDataIsStale:NO 
-										  error:&err];
-		if (url == nil || err != nil) {
-			// couldn't resolve bookmark, so skip
-			continue;
-		}
-		[documentsArray addObject:[url path]];
-	}
-	if (!documentsArray) {
-	return NO;
-	}
-	NSArray *newChildren = [QSObject fileObjectsWithPathArray:documentsArray];
-	for(QSObject * child in newChildren) {
-		[child setObject:@"com.apple.Xcode" forMeta:@"QSPreferredApplication"];
-	}
-	[object setChildren:newChildren];
-	return YES;
-}
 - (NSString *)identifierForObject:(id <QSObject>)object {
   return nil;
 }
+
 - (NSArray *)objectsForEntry:(NSDictionary *)theEntry {
   NSMutableArray *objects = [NSMutableArray arrayWithCapacity:1];
   QSObject *newObject;
