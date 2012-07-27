@@ -19,7 +19,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.2.1</string>
 	<key>CFBundleVersion</key>
-	<string>D5</string>
+	<string>DA</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2004, Blacktree, Inc.</string>
 	<key>QSPlugIn</key>
@@ -32,6 +32,9 @@
 		</array>
 		<key>description</key>
 		<string>Developer Documentation Access</string>
+		<key>extendedDescription</key>
+		<string>&lt;h1&gt;Developer Plugin&lt;/h1&gt;
+&lt;p&gt;This Plugin adds developer applications like &lt;code&gt;Icon Composer.app&lt;/code&gt; to the catalog. This works for Xcode versions up to 4.2, when Xcode was still installed in &lt;code&gt;/Developer&lt;/code&gt; as well as newr Xcode versions (&amp;gt;= 4.3), when Xcode is installed in &lt;code&gt;/Applications/Xcode.app&lt;/code&gt;.&lt;/p&gt;</string>
 		<key>icon</key>
 		<string>com.apple.dt.Xcode</string>
 		<key>relatedBundles</key>
@@ -48,26 +51,56 @@
 			<array>
 				<dict>
 					<key>ID</key>
-					<string>QSPresetDeveloperApplications</string>
+					<string>QSPresetDeveloperApplicationsXcode43</string>
 					<key>enabled</key>
 					<true/>
 					<key>name</key>
-					<string>Applications (Developer)</string>
+					<string>Developer Applications (Xcode &gt;= 4.3)</string>
+					<key>requiresPath</key>
+					<string>/Applications/Xcode.app</string>
+					<key>settings</key>
+					<dict>
+						<key>descendIntoBundles</key>
+						<true/>
+						<key>folderDepth</key>
+						<integer>6</integer>
+						<key>folderTypes</key>
+						<array>
+							<string>&apos;APPL&apos;</string>
+						</array>
+						<key>parser</key>
+						<string>QSDirectoryParser</string>
+						<key>path</key>
+						<string>/Applications/Xcode.app/Contents</string>
+						<key>skipItem</key>
+						<true/>
+					</dict>
+					<key>source</key>
+					<string>QSFileSystemObjectSource</string>
+				</dict>
+				<dict>
+					<key>ID</key>
+					<string>QSPresetDeveloperApplications42</string>
+					<key>enabled</key>
+					<true/>
+					<key>name</key>
+					<string>Developer Applications (Xcode &lt;= 4.2)</string>
+					<key>requiresPath</key>
+					<string>/Developer/Applications</string>
 					<key>settings</key>
 					<dict>
 						<key>folderDepth</key>
 						<integer>3</integer>
 						<key>folderTypes</key>
 						<array>
-							<string>'APPL'</string>
-							<string>app</string>
+							<string>&apos;APPL&apos;</string>
 						</array>
 						<key>parser</key>
 						<string>QSDirectoryParser</string>
 						<key>path</key>
 						<string>/Developer/Applications</string>
 						<key>skipItem</key>
-						<integer>1</integer>
+						<true/>
 					</dict>
 					<key>source</key>
 					<string>QSFileSystemObjectSource</string>
@@ -262,7 +295,5 @@
 			<string>QSDeveloperPlugIn_Source</string>
 		</dict>
 	</dict>
-	<key>QSRequirements</key>
-	<dict/>
 </dict>
 </plist>

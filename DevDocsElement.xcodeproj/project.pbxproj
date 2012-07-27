@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66E4796C15C2A7B7000C4761 /* Documentation.mdown in Resources */ = {isa = PBXBuildFile; fileRef = 66E4796B15C2A7B7000C4761 /* Documentation.mdown */; };
 		7F35FF4007F9ACD90056051D /* QSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F35FF3C07F9ACD90056051D /* QSCore.framework */; };
 		7F35FF4207F9ACD90056051D /* QSFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F35FF3E07F9ACD90056051D /* QSFoundation.framework */; };
 		7F46C3420A2486C0005F64F6 /* QSDeveloperPlugIn_Source.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F46C3410A2486C0005F64F6 /* QSDeveloperPlugIn_Source.m */; };
@@ -21,6 +22,7 @@
 		6669A24015AC87A600E9E15E /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
 		6669A24315AC87A600E9E15E /* Quicksilver.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Quicksilver.pch; sourceTree = "<group>"; };
 		6669A24415AC87A600E9E15E /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		66E4796B15C2A7B7000C4761 /* Documentation.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Documentation.mdown; sourceTree = "<group>"; };
 		7F33C53A0C5D2E4C007B636D /* DocSetAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DocSetAccess.framework; path = Library/PrivateFrameworks/DocSetAccess.framework; sourceTree = DEVELOPER_DIR; };
 		7F35FF3C07F9ACD90056051D /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSCore.framework; sourceTree = QSFrameworks; };
 		7F35FF3D07F9ACD90056051D /* QSEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSEffects.framework; sourceTree = QSFrameworks; };
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				8D1AC9730486D14A00FE50C9 /* Info.plist */,
+				66E4796B15C2A7B7000C4761 /* Documentation.mdown */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -135,10 +138,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7F07AFCA085E432F00E2AFC4 /* Build configuration list for PBXNativeTarget "Developer Plugin" */;
 			buildPhases = (
+				CDF2FE6F13A74E29000A9C0A /* Update Version and Documentation */,
 				8D1AC9660486D14A00FE50C9 /* Resources */,
 				8D1AC96A0486D14A00FE50C9 /* Sources */,
 				8D1AC96E0486D14A00FE50C9 /* Frameworks */,
-				CDF2FE6F13A74E29000A9C0A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -182,24 +185,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66E4796C15C2A7B7000C4761 /* Documentation.mdown in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		CDF2FE6F13A74E29000A9C0A /* ShellScript */ = {
+		CDF2FE6F13A74E29000A9C0A /* Update Version and Documentation */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Update Version and Documentation";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
+			shellScript = $QS_BUILD_ROOT/Tools/bltrversion;
 		};
 /* End PBXShellScriptBuildPhase section */
 
