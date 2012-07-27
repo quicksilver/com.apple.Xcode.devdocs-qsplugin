@@ -4,20 +4,22 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
+	<key>CFBundleDisplayName</key>
+	<string>Developer Plugin</string>
 	<key>CFBundleExecutable</key>
-	<string>Developer Module</string>
+	<string>Developer Plugin</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.blacktree.Quicksilver.QSDeveloperPlugIn</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>Developer Module</string>
+	<string>Developer Plugin</string>
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.1</string>
+	<string>1.2.1</string>
 	<key>CFBundleVersion</key>
-	<string>BA</string>
+	<string>DA</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2004, Blacktree, Inc.</string>
 	<key>QSPlugIn</key>
@@ -30,14 +32,15 @@
 		</array>
 		<key>description</key>
 		<string>Developer Documentation Access</string>
+		<key>extendedDescription</key>
+		<string>&lt;h1&gt;Developer Plugin&lt;/h1&gt;
+&lt;p&gt;This Plugin adds developer applications like &lt;code&gt;Icon Composer.app&lt;/code&gt; to the catalog. This works for Xcode versions up to 4.2, when Xcode was still installed in &lt;code&gt;/Developer&lt;/code&gt; as well as newr Xcode versions (&amp;gt;= 4.3), when Xcode is installed in &lt;code&gt;/Applications/Xcode.app&lt;/code&gt;.&lt;/p&gt;</string>
 		<key>icon</key>
-		<string>com.apple.Xcode</string>
+		<string>com.apple.dt.Xcode</string>
 		<key>relatedBundles</key>
 		<array>
-			<string>com.apple.Xcode</string>
+			<string>com.apple.dt.Xcode</string>
 		</array>
-		<key>requiresPath</key>
-		<string>/Developer</string>
 	</dict>
 	<key>QSPresetAdditions</key>
 	<array>
@@ -48,26 +51,56 @@
 			<array>
 				<dict>
 					<key>ID</key>
-					<string>QSPresetDeveloperApplications</string>
+					<string>QSPresetDeveloperApplicationsXcode43</string>
 					<key>enabled</key>
 					<true/>
 					<key>name</key>
-					<string>Applications (Developer)</string>
+					<string>Developer Applications (Xcode &gt;= 4.3)</string>
+					<key>requiresPath</key>
+					<string>/Applications/Xcode.app</string>
+					<key>settings</key>
+					<dict>
+						<key>descendIntoBundles</key>
+						<true/>
+						<key>folderDepth</key>
+						<integer>6</integer>
+						<key>folderTypes</key>
+						<array>
+							<string>&apos;APPL&apos;</string>
+						</array>
+						<key>parser</key>
+						<string>QSDirectoryParser</string>
+						<key>path</key>
+						<string>/Applications/Xcode.app/Contents</string>
+						<key>skipItem</key>
+						<true/>
+					</dict>
+					<key>source</key>
+					<string>QSFileSystemObjectSource</string>
+				</dict>
+				<dict>
+					<key>ID</key>
+					<string>QSPresetDeveloperApplications42</string>
+					<key>enabled</key>
+					<true/>
+					<key>name</key>
+					<string>Developer Applications (Xcode &lt;= 4.2)</string>
+					<key>requiresPath</key>
+					<string>/Developer/Applications</string>
 					<key>settings</key>
 					<dict>
 						<key>folderDepth</key>
 						<integer>3</integer>
 						<key>folderTypes</key>
 						<array>
-							<string>'APPL'</string>
-							<string>app</string>
+							<string>&apos;APPL&apos;</string>
 						</array>
 						<key>parser</key>
 						<string>QSDirectoryParser</string>
 						<key>path</key>
 						<string>/Developer/Applications</string>
 						<key>skipItem</key>
-						<integer>1</integer>
+						<true/>
 					</dict>
 					<key>source</key>
 					<string>QSFileSystemObjectSource</string>
@@ -81,191 +114,6 @@
 					<string>Documentation</string>
 					<key>source</key>
 					<string>QSDeveloperPlugIn_Source</string>
-				</dict>
-				<dict>
-					<key>ID</key>
-					<string>QSPresetDeveloperDocumentation</string>
-					<key>children</key>
-					<array>
-						<dict>
-							<key>ID</key>
-							<string>QSPresetDeveloperAppKitDocumentation</string>
-							<key>enabled</key>
-							<true/>
-							<key>modificationDate</key>
-							<real>111161096</real>
-							<key>name</key>
-							<string>AppKit Documentation</string>
-							<key>settings</key>
-							<dict>
-								<key>folderDepth</key>
-								<integer>2</integer>
-								<key>folderTypes</key>
-								<array>
-									<string>html</string>
-									<string>pdf</string>
-								</array>
-								<key>kind</key>
-								<string>Folder</string>
-								<key>parser</key>
-								<string>QSDirectoryParser</string>
-								<key>path</key>
-								<string>/Developer/ADC Reference Library/Documentation/Cocoa/Reference/ApplicationKit/ObjC_classic/</string>
-								<key>scanContents</key>
-								<integer>1</integer>
-								<key>skipItem</key>
-								<integer>1</integer>
-							</dict>
-							<key>source</key>
-							<string>QSFileSystemObjectSource</string>
-						</dict>
-						<dict>
-							<key>ID</key>
-							<string>QSPresetDeveloperFoundationDocumentation</string>
-							<key>enabled</key>
-							<integer>1</integer>
-							<key>modificationDate</key>
-							<real>111161112</real>
-							<key>name</key>
-							<string>Foundation Documentation</string>
-							<key>settings</key>
-							<dict>
-								<key>folderDepth</key>
-								<integer>2</integer>
-								<key>folderTypes</key>
-								<array>
-									<string>html</string>
-									<string>pdf</string>
-								</array>
-								<key>parser</key>
-								<string>QSDirectoryParser</string>
-								<key>path</key>
-								<string>/Developer/ADC Reference Library/Documentation/Cocoa/Reference/Foundation/ObjC_classic/</string>
-								<key>scanContents</key>
-								<integer>1</integer>
-							</dict>
-							<key>source</key>
-							<string>QSFileSystemObjectSource</string>
-						</dict>
-						<dict>
-							<key>ID</key>
-							<string>QSPresetDeveloperWebKitDocs</string>
-							<key>enabled</key>
-							<integer>1</integer>
-							<key>modificationDate</key>
-							<real>111161136</real>
-							<key>name</key>
-							<string>WebKit</string>
-							<key>settings</key>
-							<dict>
-								<key>folderDepth</key>
-								<integer>2</integer>
-								<key>folderTypes</key>
-								<array>
-									<string>html</string>
-									<string>pdf</string>
-								</array>
-								<key>parser</key>
-								<string>QSDirectoryParser</string>
-								<key>path</key>
-								<string>/Developer/ADC Reference Library/Documentation/Cocoa/Reference/WebKit/ObjC_classic</string>
-								<key>scanContents</key>
-								<integer>1</integer>
-							</dict>
-							<key>source</key>
-							<string>QSFileSystemObjectSource</string>
-						</dict>
-						<dict>
-							<key>ID</key>
-							<string>QSPresetDeveloperPreferencePaneDocs</string>
-							<key>enabled</key>
-							<false/>
-							<key>modificationDate</key>
-							<real>111161168</real>
-							<key>name</key>
-							<string>PreferencePanes</string>
-							<key>settings</key>
-							<dict>
-								<key>folderDepth</key>
-								<integer>2</integer>
-								<key>folderTypes</key>
-								<array>
-									<string>html</string>
-									<string>pdf</string>
-								</array>
-								<key>parser</key>
-								<string>QSDirectoryParser</string>
-								<key>path</key>
-								<string>/Developer/ADC Reference Library/Documentation/UserExperience/Reference/PreferencePanes/ObjC_classic</string>
-								<key>scanContents</key>
-								<integer>1</integer>
-							</dict>
-							<key>source</key>
-							<string>QSFileSystemObjectSource</string>
-						</dict>
-						<dict>
-							<key>ID</key>
-							<string>QSPresetDeveloperScreenSaverDocs</string>
-							<key>enabled</key>
-							<false/>
-							<key>modificationDate</key>
-							<real>111161176</real>
-							<key>name</key>
-							<string>ScreenSaver</string>
-							<key>settings</key>
-							<dict>
-								<key>folderDepth</key>
-								<integer>2</integer>
-								<key>folderTypes</key>
-								<array>
-									<string>html</string>
-									<string>pdf</string>
-								</array>
-								<key>parser</key>
-								<string>QSDirectoryParser</string>
-								<key>path</key>
-								<string>/Developer/ADC Reference Library/Documentation/UserExperience/Reference/ScreenSaver/ObjC_classic</string>
-								<key>scanContents</key>
-								<integer>1</integer>
-							</dict>
-							<key>source</key>
-							<string>QSFileSystemObjectSource</string>
-						</dict>
-						<dict>
-							<key>ID</key>
-							<string>QSPresetDeveloperAddressBookDocs</string>
-							<key>enabled</key>
-							<false/>
-							<key>modificationDate</key>
-							<real>111161184</real>
-							<key>name</key>
-							<string>AddressBook</string>
-							<key>settings</key>
-							<dict>
-								<key>folderDepth</key>
-								<integer>2</integer>
-								<key>folderTypes</key>
-								<array>
-									<string>html</string>
-									<string>pdf</string>
-								</array>
-								<key>parser</key>
-								<string>QSDirectoryParser</string>
-								<key>path</key>
-								<string>/Developer/ADC Reference Library/Documentation/UserExperience/Reference/AddressBook/ObjC_classic</string>
-								<key>scanContents</key>
-								<integer>1</integer>
-							</dict>
-							<key>source</key>
-							<string>QSFileSystemObjectSource</string>
-						</dict>
-					</array>
-					<key>enabled</key>
-					<false/>
-					<key>name</key>
-					<string>Documentation (pre 05.06)</string>
-					<key>source</key>
-					<string>QSGroupObjectSource</string>
 				</dict>
 				<dict>
 					<key>ID</key>
@@ -435,33 +283,17 @@
 			<string>DeveloperFolderIcon</string>
 			<key>name</key>
 			<string>Developer</string>
-			<key>requiresPath</key>
-			<string>/Developer</string>
 			<key>source</key>
 			<string>QSGroupObjectSource</string>
 		</dict>
 	</array>
 	<key>QSRegistration</key>
 	<dict>
-		<key>QSBundleChildHandlers</key>
-		<dict>
-			<key>com.apple.Xcode</key>
-			<string>QSDeveloperPlugIn_Source</string>
-		</dict>
 		<key>QSObjectSources</key>
 		<dict>
 			<key>QSDeveloperPlugIn_Source</key>
 			<string>QSDeveloperPlugIn_Source</string>
 		</dict>
-	</dict>
-	<key>QSRequirements</key>
-	<dict>
-		<key>feature</key>
-		<string>0</string>
-		<key>paths</key>
-		<array>
-			<string>/Developer</string>
-		</array>
 	</dict>
 </dict>
 </plist>
